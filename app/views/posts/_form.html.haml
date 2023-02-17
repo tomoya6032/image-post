@@ -1,0 +1,12 @@
+.container
+  %ul
+    - @post.errors.full_messages.each do |message|
+      %li= message
+  = form_with(model: post, local: true) do |form|
+    = form.label :image
+    = form.file_field :image
+
+    = form.label :content
+    = form.text_field :content
+
+    = form.submit "投稿する"
