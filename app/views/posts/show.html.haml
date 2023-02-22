@@ -1,2 +1,14 @@
-\.h1 ここにPOSTのインデックスが表示される
-%h1 文字
+
+.index_container
+  %h2 記事詳細ページ
+.post_image
+  - if @post.image.attached?
+    .post_image
+      = image_tag @post.image.variant(resize: "400x400")
+    .dropdown
+      = image_tag 'actions.svg', class: 'dropbtn'
+      .dropdown-content.mini
+        = link_to "Edit", edit_post_path(@post), class: "dropdown-item"
+        = link_to "Delete", post_path(@post), class: "dropdown-item", data: {method: 'delete', confirm: "本当に削除してもよろしいですか？"}
+  %p= @post.content
+
