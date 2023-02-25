@@ -50,6 +50,8 @@ gem "bootsnap", require: false
 
 
 
+gem 'mini_magick'
+gem 'image_processing', '~> 1.2'
 gem 'hamlit'
 gem 'sass-rails'
 gem 'better_errors'
