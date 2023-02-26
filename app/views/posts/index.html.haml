@@ -1,17 +1,20 @@
 %h1 Post List
-
-- @posts.each do |post|
-  %p
-    %strong Image:
-    = post.image
-
-  %p
-    %strong Content:
-    = post.content
-
-  = link_to 'Show', post
-  = link_to 'Edit', edit_post_path(post)
-  = link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }
+.row.row-cols-1.row-cols-sm-2.row-cols-md-3.row-cols-lg-4.g-4
+  - @posts.each do |post|
+    .col
+      .card
+        .card-header
+          %strong 写真:
+        .card-body
+          %p.card-text= post.image
+        .card-header
+          %strong テキスト:
+        .card-body
+          %p.card-text= post.content
+        .card-footer
+          = link_to '詳細', post, class: "btn btn-sm btn-primary"
+          = link_to '編集', edit_post_path(post), class: "btn btn-sm btn-secondary"
+          = link_to '削除', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn-danger"
 
 = link_to 'New Post', new_post_path
 
