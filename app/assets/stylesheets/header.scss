@@ -1,0 +1,46 @@
+
+
+.header {
+  height: 100px;
+  background-color: rgb(240, 240, 43);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px; 
+  width: 100%;
+}
+
+.header_logos {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+  
+.header_pagetitle {
+  margin-left: 0 ; /* ロゴの右側にページタイトルを配置する */
+}
+  
+.pagetitle a {
+    color: #000; /* ページタイトルのリンクの色を設定する */
+    font-size: 24px; /* ページタイトルのフォントサイズを設定する */
+    text-decoration: none; /* ページタイトルのリンクの下線を削除する */
+    display: block;
+    padding: 20px;
+    border: 3px solid rgb(78, 78, 78);
+    border-radius: 20px;
+}
+
+.header_dropdown {
+  
+  
+}
+
+.header_right {
+   margin-right: 20px;
+   a {
+    padding: 20px;
+    border: 3px solid rgb(78, 78, 78);
+    border-radius: 20px;
+   }
+}

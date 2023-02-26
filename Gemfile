@@ -49,7 +49,7 @@ gem "bootsnap", require: false
 # gem "image_processing", "~> 1.2"
 
 
-
+gem 'carrierwave', '~> 2.0'
 gem 'mini_magick'
 gem 'image_processing', '~> 1.2'
 gem 'hamlit'
