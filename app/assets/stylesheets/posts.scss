@@ -1,19 +1,35 @@
-.card-container {
-    display: grid; /* カードの横並び */
-    grid-template-columns: repeat(auto-fit, minmax(342px, 1fr)); /* gridの設定 */
-    gap: 20px 30px; /* カード同士の隙間 縦方向 横方向 */
-    margin: 109px auto 0;
-    text-align: start; /* カード内の中央寄せ解除 */
-    max-width: 90%;
+// .index_container {
+//    background-color: #ffffff;
+// }
+
+.item {
+  flex: 1 0 280px; /* 各アイテムの幅を設定 */
+  // margin-right: 20px;
+  margin-bottom: 20px;
+  padding: 16px;
+  padding-bottom: 30px; 
+  border: 2px solid rgb(189, 189, 189);
+}
+
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #ffffff;
+  margin-left: 40px;
+
+}
+
+
+
+/* 画面幅が一定以上になった場合に、アイテム間の余白を調整 */
+@media (min-width: 768px) {
+  .item {
+    margin-right: 40px;
+    margin-bottom: 40px;
+    max-width: 30%;
   }
-  
-  .card-item {
-    width: 100%;
-    max-width: 342px;
-    margin: 0 auto;
-    padding: 16px 16px 35px;
-    background-color: #ffffff;
-  }
+}
+
   
   .card-item img {
     width: 100%;
@@ -21,4 +37,10 @@
     /* max-width: 310px; */
     /* height: auto;  */
     vertical-align: bottom; /* 画像の下の余白を埋める */
+  }
+
+  .post_image {
+     img {
+     height: 500px;
+    }
   }

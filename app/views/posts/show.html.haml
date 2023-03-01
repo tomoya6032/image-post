@@ -3,14 +3,15 @@
   %h2 記事詳細ページ
 
   
-  .post_image
+  .post_container 
     -# - if @post.image.attached?
     .post_image
       = image_tag @post.image.url, class: 'image_message'
-  .dropdown
-    -# = image_tag 'actions.svg', class: 'dropbtn'
-    .dropdown-content.mini
-      = link_to "編集", edit_post_path(@post), class: "dropdown-item"
-      = link_to "削除", post_path(@post), class: "dropdown-item", data: {method: 'delete', confirm: "本当に削除してもよろしいですか？"}
-  %p= @post.content
+
+    .dropdown
+      -# = image_tag 'actions.svg', class: 'dropbtn'
+      .dropdown-content.mini
+        = link_to "編集", edit_post_path(@post), class: "dropdown-item"
+        = link_to "削除", post_path(@post), class: "dropdown-item", data: {method: 'delete', confirm: "本当に削除してもよろしいですか？"}
+    %p= @post.content
 
