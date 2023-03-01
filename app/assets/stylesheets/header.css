@@ -1,0 +1,58 @@
+@charset "UTF-8";
+.header {
+  height: 100px;
+  background-color: #f0f02b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.header_logos {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header_pagetitle {
+  margin-left: 0;
+  /* ロゴの右側にページタイトルを配置する */
+}
+
+.pagetitle a {
+  color: #000;
+  /* ページタイトルのリンクの色を設定する */
+  font-size: 24px;
+  /* ページタイトルのフォントサイズを設定する */
+  text-decoration: none;
+  /* ページタイトルのリンクの下線を削除する */
+  display: block;
+  padding: 20px;
+  border: 3px solid #4e4e4e;
+  border-radius: 20px;
+}
+
+.header_right {
+  margin-right: 20px;
+}
+
+.header_right a {
+  padding: 20px;
+  border: 3px solid #4e4e4e;
+  border-radius: 20px;
+}
+/*# sourceMappingURL=header.css.map */

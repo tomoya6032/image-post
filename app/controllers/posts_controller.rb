@@ -33,7 +33,7 @@ class PostsController < ApplicationController
 
     def post_params
       # params.require(:post).permit(:content, images: [])
-      params.require(:post).permit(:content, images_attributes: [:image]).merge(user_id: current_user.id)
+      params.require(:post).permit(:content, images_attributes: [:picture]).merge(user_id: current_user.id)
     end
 
     def set_post
