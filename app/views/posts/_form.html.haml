@@ -2,9 +2,10 @@
   %ul
     - @post.errors.full_messages.each do |message|
       %li= message
-  = form_with(model: @post, url: posts_path, local: true, html: {multipart: true}) do |form|  
-    = form.label :image
-    = form.file_field :image
+  = form_with(model: @post, local: true, multipart: true) do |form|  
+    = form.label :images
+    = form.file_field :images, multiple: true
+    
 
     = form.label :content
     = form.text_field :content

@@ -1,24 +1,12 @@
 %h1 Post List
-
-.row.row-cols-1.row-cols-sm-2.row-cols-md-3.row-cols-lg-4.g-4
+.wrap  
   - @posts.each do |post|
-    .col
-      .card
-        .card-header
-          %strong 写真:
-        .card-body
-          %p.card-text= post.image
-        .card-header
-          %strong テキスト:
-        .card-body
-          %p.card-text= post.content
-        .card-footer
-          = link_to '詳細', post, class: "btn btn-sm btn-primary"
-          = link_to '編集', edit_post_path(post), class: "btn btn-sm btn-secondary"
-          = link_to '削除', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn-danger"
-
+    = render 'commons/post', post: post 
+ 
+   
 = link_to 'New Post', new_post_path
 
+-# .row.row-cols-1.row-cols-sm-2.row-cols-md-3.row-cols-lg-4.g-4
 
 
 
