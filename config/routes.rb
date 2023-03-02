@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "posts#index"
+  post "posts/upload_image", to: "posts#upload_image"
 
   resources :posts do
     resources :comments
