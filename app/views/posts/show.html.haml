@@ -2,16 +2,35 @@
 .index_container
   %h2 記事詳細ページ
 
-  
-  .post_container 
-    -# - if @post.image.attached?
-    .post_image
-      = image_tag @post.image.url, class: 'image_message'
+.container.my-8
+  -# #post-<%= post.id %>.mb-3
+  .post{id: @post.id, class: 'mb-3'}
+    %p.font-bold タイトル：#{@post.title}
+    - if @post.images.attached?
+      - @post.images.each do |image|
+        .mb-2.inline-flex
+          
+          -# = image_tag(image, width:100, class: "")
+          = image_tag(image.variant(resize_to_limit: [100, 100]), class: "")
 
-    .dropdown
-      -# = image_tag 'actions.svg', class: 'dropbtn'
-      .dropdown-content.mini
-        = link_to "編集", edit_post_path(@post), class: "dropdown-item"
-        = link_to "削除", post_path(@post), class: "dropdown-item", data: {method: 'delete', confirm: "本当に削除してもよろしいですか？"}
-    %p= @post.content
+    = link_to "編集", edit_post_path(@post), class: "btn btn-outline-gray"
+    = link_to "削除", @post, data: { turbo_method: :delete ,turbo_confirm: "削除してよろしいですか?" }, class: "btn btn-outline-gray"
+
+  
+
+
+
+
+
+  -# .post_container 
+  -#   - if post.image.atatached?
+  -#   .post_image
+  -#     = image_tag @post.image.url, class: 'image_message'
+
+  -#   .dropdown
+  -#     -# = image_tag 'actions.svg', class: 'dropbtn'
+  -#     .dropdown-content.mini
+  -#       = link_to "編集", edit_post_path(@post), class: "dropdown-item"
+  -#       = link_to "削除", post_path(@post), class: "dropdown-item", data: {method: 'delete', confirm: "本当に削除してもよろしいですか？"}
+  -#   %p= @post.content
 
