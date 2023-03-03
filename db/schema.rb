@@ -52,10 +52,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_02_200905) do
 
   create_table "posts", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.string "picture"
+    t.string "image_type"
+    t.bigint "image_id"
     t.text "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["image_type", "image_id"], name: "index_posts_on_image"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 

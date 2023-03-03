@@ -17,10 +17,11 @@ class PostsController < ApplicationController
     end
 
     def edit
+
     end
     
     def create
-      # @post = Post.new(post_params)
+        # @post = Post.new(post_params)
       # @post = current_user.posts.build(post_params)
         @post = current_user.posts.new(post_params)
         if @post.save
@@ -40,8 +41,9 @@ class PostsController < ApplicationController
   
 
     def destroy
-      @post.destroy
-      redirect_to posts_path, notice: "削除しました", status: :see_other
+      post = current_user.posts.find(params[:id])
+      post.destroy!
+      redirect_to root_path, notice: "削除しました", status: :see_other
     end
     
 
@@ -58,9 +60,6 @@ class PostsController < ApplicationController
       @post = Post.find(params[:id])
     end
 
-    def post_params
-      params.require(:post).permit(:title).merge(images: uploaded_images)
-    end
 
     # アップロード済み画像の検索
     def uploaded_images
@@ -76,11 +75,15 @@ class PostsController < ApplicationController
       )
     end
 
-    def post_params
-      # params.require(:post).permit(:content, images: [])
-      params.require(:post).permit(:title, images_attributes: [:picture]).merge(user_id: current_user.id)
-    end
+    # def post_params
+    #   # params.require(:post).permit(:content, images: [])
+    #   params.require(:post).permit(:title, images_attributes: [:image]).merge(user_id: current_user.id)
+    # end
 
+    def post_params
+      # params.require(:post).permit(:title).merge(images: uploaded_images)
+      params.require(:post).permit(:title, images: [])
+    end
     
     
 end

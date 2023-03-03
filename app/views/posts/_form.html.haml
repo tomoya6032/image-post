@@ -19,7 +19,7 @@
           - @post.images.each do |image|
             %div.image-box.inline-flex.mx-1.mb-5{ "data-controller" => "images", "data-images-target" => "image_box" }
               %div.text-center
-                = image_tag image, width: "100"
+                = image_tag(image, width:100, class: "")
                 %a.link.cursor-pointer{ "data-action" => "click->images#deleteImage" } 削除
                 = f.hidden_field :images, name: "post[images][]", style: "display: none", value: "#{image.blob.id}"
 

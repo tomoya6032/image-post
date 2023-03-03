@@ -10,8 +10,8 @@
       - @post.images.each do |image|
         .mb-2.inline-flex
           
-          -# = image_tag(image, width:100, class: "")
-          = image_tag(image.variant(resize_to_limit: [100, 100]), class: "")
+          = image_tag(image, width:400, class: "")
+          -# = image_tag(image.variant(resize_to_limit: [100, 100]), class: "")
 
     = link_to "編集", edit_post_path(@post), class: "btn btn-outline-gray"
     = link_to "削除", @post, data: { turbo_method: :delete ,turbo_confirm: "削除してよろしいですか?" }, class: "btn btn-outline-gray"

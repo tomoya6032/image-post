@@ -9,6 +9,7 @@
   padding: 16px;
   padding-bottom: 30px; 
   border: 2px solid rgb(189, 189, 189);
+  border-radius: 20px;
 }
 
 .wrap {
@@ -19,6 +20,10 @@
 
 }
 
+
+// div[data-images-target="preview"] img {
+//   max-width: 100%;
+// }
 
 
 /* 画面幅が一定以上になった場合に、アイテム間の余白を調整 */

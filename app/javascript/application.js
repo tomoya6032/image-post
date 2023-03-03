@@ -2,5 +2,7 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 
+require('@rails/activestorage').start()
+
 //= require jquery
 //= require bootstrap-sprockets

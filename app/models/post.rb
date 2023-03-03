@@ -2,7 +2,7 @@ class Post < ApplicationRecord
     belongs_to :user
     # has_many :post_images, dependent: :destroy
     has_many_attached :images
-    # validates :images, presence: true
+    validates :images, presence: true
     validates :title, presence: true
     # mount_uploader :image, ImageUploader
     has_many :comments

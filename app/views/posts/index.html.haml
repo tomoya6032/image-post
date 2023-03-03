@@ -1,4 +1,5 @@
 %h1 Post List
+= link_to '新規投稿', new_post_path
 .wrap  
   - @posts.each do |post|
     = render 'commons/post', post: post 
