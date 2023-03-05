@@ -6,4 +6,8 @@ class User < ApplicationRecord
 
   has_many :posts, dependent: :destroy
   has_many_attached :images
+
+  def has_written?(post)
+    posts.exists?(id)
+  end
 end
