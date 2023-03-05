@@ -12,20 +12,27 @@ body {
     background-color: #ffffff;
   }
   
-  h1 {
-    font-size: 36px;
-    text-align: center;
-    margin-top: 50px;
-  }
-  
-  p {
-    font-size: 18px;
-    margin: 20px;
-  }
-  
-  a {
-    font-size: 18px;
-    margin: 20px;
-    text-decoration: none;
-    color: #333;
-  }
+h1 {
+  font-size: 36px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+p {
+  font-size: 18px;
+  margin: 20px;
+}
+
+a {
+  font-size: 18px;
+  margin: 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+.btn {
+  font-size: 18px;
+  margin: 20px;
+  text-decoration: none;
+  color: white;
+}
