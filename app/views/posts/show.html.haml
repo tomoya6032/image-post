@@ -8,9 +8,8 @@
     %p.font-bold タイトル：#{@post.title}
     - if @post.images.attached?
       - @post.images.each do |image|
-        .mb-2.inline-flex
-          
-          = image_tag(image, width:400, class: "")
+        .item
+          = image_tag(image, width:400, class: "image_message")
           -# = image_tag(image.variant(resize_to_limit: [100, 100]), class: "")
 
     = link_to "編集", edit_post_path(@post), class: "btn btn-sm btn-success"
