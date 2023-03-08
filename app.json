@@ -1,0 +1,15 @@
+{
+  "name": "image-post",
+  "description": "これは画像投稿サイトです",
+  "keywords": [],
+  "website": "",
+  "repository": "https://github.com/tomoya6032/image-post.git",
+  "addons": [
+    "heroku-postgresql:hobby-dev"
+  ],
+  "buildpacks": [{
+    "url": "heroku/nodejs"
+  }, {
+    "url": "heroku/ruby"
+  }]
+}
