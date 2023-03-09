@@ -2,8 +2,9 @@
   %ul
     - @post.errors.full_messages.each do |message|
       %li= message
-    = form_with(model: @post, local: true, data: { controller: "images"}) do |f|
-      -# = render 'layouts/errors', obj: @post
+    = form_with(model: @post, local: true, multipart: true, data: { controller: "images" }) do |f|
+
+      = f.hidden_field :authenticity_token
 
       .mb-3
         = f.label :title, "タイトル", class: "font-semibold block p-1"
@@ -25,7 +26,6 @@
 
       .mb-3
         = f.submit "投稿する", class: "btn btn-sky"
-
 
 
 
