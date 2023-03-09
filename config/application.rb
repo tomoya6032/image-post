@@ -33,6 +33,6 @@ module ImagePost
 
     config.generators.template_engine = :haml   
     config.active_storage.replace_on_assign_to_many = false
-
+    config.action_controller.default_protect_from_forgery = false
   end
 end

@@ -12,8 +12,8 @@
           = image_tag(image, width:400, class: "image_message")
           -# = image_tag(image.variant(resize_to_limit: [100, 100]), class: "")
 
-    = link_to "編集", edit_post_path(@post), class: "btn btn-sm btn-success"
-    = link_to "削除", post_path(@post), method: :delete, data: { confirm: "本当に削除しますか？" }, class: "btn btn-sm btn-danger"
+    -# = link_to "編集", edit_post_path(@post), class: "btn btn-sm btn-success"
+    = link_to "削除する", post_path(@post), method: :delete, data: { confirm: "本当に削除しますか？" }, class: "btn btn-sm btn-danger"
 
   
 

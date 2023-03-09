@@ -8,6 +8,8 @@ class Post < ApplicationRecord
     has_many :comments
     has_many :reactions
 
+    # has_one_attached :attached
+
     # def display_created_at
     #   I18n.l(self.created_at, format: :default)
     # end

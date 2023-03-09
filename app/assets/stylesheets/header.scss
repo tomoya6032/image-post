@@ -41,3 +41,27 @@
     border-radius: 20px;
    }
 }
+
+
+
+@media (max-width: 500px) {
+  
+  .pagetitle a {
+    font-size: 18px;
+    padding: 10px; 
+  }
+
+  .header_right {
+    margin-right: 0;
+    a {
+      font-size: 18px;
+      padding: 10px;
+      
+    }
+  }
+ 
+
+  .header {
+    text-align-last: justify;
+  }
+}
