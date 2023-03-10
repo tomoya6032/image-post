@@ -2,6 +2,13 @@
 .text-center
   = link_to '＼＼　新規投稿　／／', new_post_path, class: "btn btn-warning btn-lg mx-auto"
 
+.div_notes
+  .p このサイトはアカウント登録をしなくても閲覧できます
+  .p アカウント登録すると画像を投稿することができます
+  .p 登録の際には@を含む文字をEmail欄に入力してください
+  .p 例えばshinohra@tomoya　です
+  .p passwordはテキトーに123456として6文字必要です。
+
 .wrap  
   - @posts.each do |post|
     = render 'commons/post', post: post 
