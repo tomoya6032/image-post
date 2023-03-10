@@ -3,11 +3,13 @@
   = link_to '＼＼　新規投稿　／／', new_post_path, class: "btn btn-warning btn-lg mx-auto"
 
 .div_notes
-  .p このサイトはアカウント登録をしなくても閲覧できます
-  .p アカウント登録すると画像を投稿することができます
-  .p 登録の際には@を含む文字をEmail欄に入力してください
-  .p 例えばshinohra@tomoya　です
-  .p passwordはテキトーに123456として6文字必要です。
+  %ul
+    %li 人の顔が映り込んだ写真は投稿しないでください
+    %li このサイトは1ヶ月程度でクローズします
+    %li このサイトはアカウント登録をしなくても閲覧できます
+    %li アカウント登録すると画像を投稿することができます
+    %li 登録の際には@を含む文字をEmail欄に入力してください。<br> 例えば、shinohra@tomoyaです
+    %li passwordはテキトーに123456として6文字必要です
 
 .wrap  
   - @posts.each do |post|
