@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_many_attached :images
 
   def has_written?(post)
-    posts.exists?(id)
+    posts.exists?(id: post.id)
   end
+
 end
