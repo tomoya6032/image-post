@@ -36,3 +36,26 @@ a {
   text-decoration: none;
   color: white;
 }
+
+.div_notes {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  margin: 20px 0;
+  padding: 10px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  word-break: break-word;
+  margin-bottom: 80px;
+  .p {
+    margin: 10px 0;
+  }
+}
+
+
+// .sitetitle h1 {
+//     color: rgb(9, 149, 25);
+
+// }

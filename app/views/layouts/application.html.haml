@@ -4,6 +4,9 @@
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     
     %display_meta_tags(default_meta_tags) 
+    %title クローバー祭非公式Webサイト
+    %meta{name: 'description', content: '期間限定特設画像投稿サイト'}
+    %meta{name: 'keywords', content: 'クローバー祭, ねむの木, 画像投稿'}
     
     = csrf_meta_tags
     = csp_meta_tag
@@ -30,7 +33,7 @@
             = link_to 'ログイン', new_user_session_path, class: 'header_loginBtn'
     
     .sitetitle 
-      %h1 写真投稿サイト
+      %h1 クローバー祭非公式Webサイト
 
     - if flash.present?
       .flash
