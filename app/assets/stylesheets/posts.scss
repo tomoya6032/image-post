@@ -3,13 +3,25 @@
 }
 
 .item {
-  flex: 1 0 280px; /* 各アイテムの幅を設定 */
+  // flex: 1 0 280px; /* 各アイテムの幅を設定 */
+  
   margin-right: 20px;
   margin-bottom: 20px;
   padding: 16px;
   padding-bottom: 30px; 
   border: 2px solid rgb(189, 189, 189);
-  border-radius: 20px;
+  border-radius: 6px;
+}
+
+.post-images-item {
+  // flex: 1 0 280px; /* 各アイテムの幅を設定 */
+  
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 8px;
+  padding-bottom: 12px; 
+  border: 2px solid rgb(189, 189, 189);
+  border-radius: 6px;
 }
 
 .wrap {
@@ -19,10 +31,20 @@
   margin-left: 40px;
 
 }
+.post-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2列のグリッドを作成 */
+  .item {
+    width: 100%;
+  }
+}
 
 
-
-
+.post {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2列のグリッドを作成 */
+  
+}
 
 
 /* 画面幅が一定以上になった場合に、アイテム間の余白を調整 */
@@ -30,7 +52,7 @@
   .item {
     margin-right: 40px;
     margin-bottom: 40px;
-    max-width: 49%;
+    max-width: 47%;
   }
 }
 
@@ -63,6 +85,7 @@
   }
 }
 
+
 .card-footer {
   display: flex;
   flex-direction: row;
@@ -70,6 +93,7 @@
   width: 100%;
   padding: 20px 0;
   justify-content: center;
+  // justify-content: flex-end; /* アイテムを右揃え */
 }
 
 

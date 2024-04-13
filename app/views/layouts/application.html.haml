@@ -4,9 +4,9 @@
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     
     %display_meta_tags(default_meta_tags) 
-    %title クローバー祭非公式Webサイト
-    %meta{name: 'description', content: '期間限定特設画像投稿サイト'}
-    %meta{name: 'keywords', content: 'クローバー祭, ねむの木, 画像投稿'}
+    %title DWAT活動写真共有サイト
+    %meta{name: 'description', content: 'ぐんまDWATの活動記録として画像を保存するサイト'}
+    %meta{name: 'keywords', content: 'DWAT, ぐんまDWAT, 写真'}
     
     = csrf_meta_tags
     = csp_meta_tag
@@ -21,7 +21,7 @@
       .header_logos
         .header_pagetitle
           .pagetitle
-            = link_to 'image-post', root_path
+            = link_to 'DWAT-post', root_path
         .header_right
           - if user_signed_in?
             .header_dropdown
@@ -33,7 +33,7 @@
             = link_to 'ログイン', new_user_session_path, class: 'header_loginBtn'
     
     .sitetitle 
-      %h1 クローバー祭非公式Webサイト
+      %h1 DWAT活動写真共有サイト
 
     - if flash.present?
       .flash

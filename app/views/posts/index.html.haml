@@ -1,15 +1,16 @@
-%h1 Post List
+-# %h1 DWAT images
 .text-center
   = link_to '＼＼　新規投稿　／／', new_post_path, class: "btn btn-warning btn-lg mx-auto"
 
 .div_notes
   %ul
-    %li 人の顔が映り込んだ写真は投稿しないでください
-    %li このサイトは1ヶ月程度でクローズします
-    %li このサイトはアカウント登録をしなくても閲覧できます
-    %li アカウント登録すると画像を投稿することができます
-    %li 登録の際には@を含む文字をEmail欄に入力してください。<br> 例えば、shinohra@tomoyaです
-    %li passwordはテキトーに123456として6文字必要です
+    %li 災害派遣で活動した記録を共有するサイトです。
+    %li このサイトは閲覧専用となります。
+    %li このサイトはぐんまDWATメンバーの他に全国のDWATメンバーと<br>共有することを目的として作成しています
+    %li 活動報告等にご使用ください
+    %li 私的な活動の利用はお控えください
+    %li 問い合わせは以下のアドレスにお問い合わせください<br>tomoya6032@gmail.com
+
 
 .wrap  
   - @posts.each do |post|

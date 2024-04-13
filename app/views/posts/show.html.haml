@@ -1,21 +1,22 @@
 
 .index_container
-  %h2 記事詳細ページ
+  %h2 投稿詳細ページ
 
 
 .container.my-8
   -# #post-<%= post.id %>.mb-3
   .post{id: @post.id, class: 'mb-3'}
-    %p.font-bold タイトル：#{@post.title}
+    %p.font-bold 【text】：#{@post.title}
+  .post-images
     - if @post.images.attached?
       - @post.images.each do |image|
-        .item
+        .post-images-item
           = image_tag(image, width:400, class: "image_message")
           -# = image_tag(image.variant(resize_to_limit: [100, 100]), class: "")
 
 - if user_signed_in? && current_user.has_written?(@post)
   .card-footer
-    = link_to '詳細', @post, class: "btn btn-sm btn-primary"
+    -# = link_to '詳細', @post, class: "btn btn-sm btn-primary"
     = button_to '削除', post_path(@post), method: :delete, data: { confirm: "本当に削除しますか？" }, class: "btn btn-sm btn-danger"
 
   
