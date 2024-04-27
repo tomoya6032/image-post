@@ -6,6 +6,8 @@ class PostsController < ApplicationController
 
    def index
         @posts = Post.all
+        # @posts = Post.all.order_by_title 
+        # @posts = Post.all.order(title: :asc)
     end
     
     def show

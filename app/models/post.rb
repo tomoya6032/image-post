@@ -8,6 +8,10 @@ class Post < ApplicationRecord
     has_many :comments
     has_many :reactions
 
+
+    default_scope -> { order(title: :asc) }
+    # column :title, :string, null: false
+    # scope :order_by_title, -> { order(title: :asc) }
     # has_one_attached :attached
 
     # def display_created_at
